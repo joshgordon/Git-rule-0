@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Git Rule 0</title>
+<style>
+div.hero {
+	font-family: sans-serif;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 10em;
+	width: 100%;
+	font-weight: bold;
+}
+</style>
+
+	</head>
+	<body>
+		<div class="hero">DON'T FORCE PUSH</div>
+	</body>
+<script type="text/javascript">
+var state=0;
+function updateState() {
+	setTimeout(updateState, 250)
+	colors = ["cyan", "magenta"]
+	document.body.bgColor = colors[state % colors.length]
+	document.getElementsByClassName("hero")[0].style.color = colors[(state + 1) % colors.length]
+	state += 1
+}
+updateState()
+</script>
+</html>
