@@ -12,6 +12,24 @@ div.hero {
 	font-size: 10em;
 	width: 100%;
 	font-weight: bold;
+  animation: blinking-text 400ms infinite;
+}
+body {
+  animation: blinking-body 400ms infinite;
+}
+
+@keyFrames blinking-text {
+  0%{ color: #0ff;}
+  49%{ color: #0ff;}
+  50%{ color: #f0f;}
+  100%{ color: #f0f;}
+}
+
+@keyFrames blinking-body {
+  0%{ background-color: #f0f;}
+  49%{ background-color: #f0f;}
+  50%{ background-color: #0ff;}
+  100%{ background-color: #0ff;}
 }
 </style>
 
@@ -19,15 +37,5 @@ div.hero {
 	<body>
 		<div class="hero">DON'T FORCE PUSH</div>
 	</body>
-<script type="text/javascript">
-var state=0;
-function updateState() {
-	setTimeout(updateState, 250)
-	colors = ["cyan", "magenta"]
-	document.body.bgColor = colors[state % colors.length]
-	document.getElementsByClassName("hero")[0].style.color = colors[(state + 1) % colors.length]
-	state += 1
-}
-updateState()
-</script>
 </html>
+
